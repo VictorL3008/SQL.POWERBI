@@ -8,7 +8,11 @@ El set de datos fue descargado mediante Kaggle,URL : https://www.kaggle.com/data
 -Teconologías:
 
 SQL Server: Para la consulta, manipulación y análisis de datos.
+
+
 Power BI: Para la creación de dashboards interactivos y la visualización de los resultados.
+
+
 Excel (Opcional): Para algunos análisis adicionales o manejo de datos externos.
 
 
