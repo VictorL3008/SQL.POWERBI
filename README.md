@@ -3,7 +3,7 @@
 CoffeShop:
 
 Este proyecto tiene como objetivo analizar el rendimiento de las ventas, inventario y trabadores de una tienda de cafés. Se ha utilizado SQL para la extracción y manipulación de datos desde una base de datos y Power BI para la visualización de los resultados de análisis.
-
+El set de datos fue descargado mediante Kaggle,URL : https://www.kaggle.com/datasets/viramatv/coffee-shop-data
 
 Teconologías:
 
@@ -21,5 +21,21 @@ Identificar los productos más vendidos y aquellos con menor rotación.
 Analizar el comportamiento de pago a trabajadores y horas trabajadas.
 Estudiar la distribución de ingresos por categorías de productos y temporadas.
 Revisar las existencias y determinar los tiempos óptimos para reordenar productos.
+
+
+Estructura:
+
+📂 Café Store Analytics
+│
+├── 📁 SQL
+│   ├── create_tables.sql      # Script para crear las tablas de la base de datos
+│   ├── queries.sql            # Consultas SQL utilizadas para extraer los datos clave
+│   
+├── 📁 PowerBI
+│   ├── CoffeShop_Dashboard.pbix   # Informe de ventas,inventario,staff en Power BI
+│
+└── README.md                  # Archivo de descripción del proyecto
+
+
 
 
