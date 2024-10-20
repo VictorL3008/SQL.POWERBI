@@ -30,10 +30,15 @@ Estructura:
 ├── 📁 SQL
 │   ├── create_tables.sql      # Script para crear las tablas de la base de datos
 │   ├── queries.sql            # Consultas SQL utilizadas para extraer los datos clave
-│   
+
+
+
 ├── 📁 PowerBI
 │   ├── CoffeShop_Dashboard.pbix   # Informe de ventas,inventario,staff en Power BI
-│
+
+
+
+
 └── README.md                  # Archivo de descripción del proyecto
 
 
