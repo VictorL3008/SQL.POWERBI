@@ -49,7 +49,7 @@ Revisar las existencias y determinar los tiempos óptimos para reordenar product
 ├── 📁 PowerBI
 
 
-│   ├── CoffeShop_Dashboard.pbix   # Informe de ventas,inventario,staff en Power BI
+│   ├── CoffeShop_Dashboard.pbix   # Informe de ventas,inventario,staff en Power BI (debe descargarse)
 
 
 
