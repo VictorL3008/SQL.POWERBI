@@ -38,12 +38,17 @@ Revisar las existencias y determinar los tiempos óptimos para reordenar product
 
 -Estructura:
 
+
 │   ├── create_tables.sql      # Script para crear las tablas de la base de datos
+
+
 │   ├── CoffeShopDB.sql            # Consultas SQL utilizadas para extraer los datos clave
 
 
 
 ├── 📁 PowerBI
+
+
 │   ├── CoffeShop_Dashboard.pbix   # Informe de ventas,inventario,staff en Power BI
 
 
