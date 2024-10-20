@@ -25,8 +25,6 @@ Revisar las existencias y determinar los tiempos óptimos para reordenar product
 
 -Estructura:
 
-📂 Café Store Analytics
-│
 ├── 📁 SQL
 │   ├── create_tables.sql      # Script para crear las tablas de la base de datos
 │   ├── queries.sql            # Consultas SQL utilizadas para extraer los datos clave
