@@ -19,11 +19,20 @@ Excel (Opcional): Para algunos análisis adicionales o manejo de datos externos.
 
 -Descripción:
 
-La tienda de cafés desea comprender mejor su rendimiento en términos de ventas, comportamiento de los trabajadores, inventario y rentabilidad. Los principales objetivos del análisis incluyen:
+La tienda de cafés desea comprender mejor su rendimiento en términos de ventas, comportamiento de los trabajadores, inventario y rentabilidad.
+
+Los principales objetivos del análisis incluyen:
+
 
 Identificar los productos más vendidos y aquellos con menor rotación.
+
+
 Analizar el comportamiento de pago a trabajadores y horas trabajadas.
+
+
 Estudiar la distribución de ingresos por categorías de productos y temporadas.
+
+
 Revisar las existencias y determinar los tiempos óptimos para reordenar productos.
 
 
