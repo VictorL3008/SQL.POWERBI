@@ -39,6 +39,10 @@ Revisar las existencias y determinar los tiempos óptimos para reordenar product
 -Estructura:
 
 
+
+└    ── CoffeShop.xlsx                 # Archivo excel con los datos trabajados en tablas normalizadas
+
+
 │   ├── create_tables.sql      # Script para crear las tablas de la base de datos
 
 
