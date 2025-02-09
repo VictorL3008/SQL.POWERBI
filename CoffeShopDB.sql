@@ -1,36 +1,35 @@
 
--- Dashboard 1: 
+-- Dashboard 1:
 
- -- Actividad de ordenes --
+-- Order Activity --
 
--- Para eso necesitamos los siguientes datos --
-
+-- For this, we need the following data --
 -- Query --
 SELECT 
-o.order_id, -- Total de ordenes --
-i.[ item_price ], -- Total de ventas y valor promedio de ordenes -- 
-o.quantity, -- Total de artículos --
-i.item_cat, -- Ventas por categoría --
-i.item_name, -- Artículos mas vendidos --
-o.created_at -- Ordenes y ventas por hora --
+o.order_id, -- Total orders --
+i.[Â item_priceÂ ], -- Total sales and average order value --
+o.quantity, -- Total items --
+i.item_cat, -- Sales by category --
+i.item_name, -- Best-selling items --
+o.created_at -- Orders and sales by hour --
 FROM orders o 
 LEFT JOIN items I ON O.item_id = I.item_id
 ;
 
 -- Dashboard 2:
 
- -- Administración de inventario --
+ -- Inventory Management --
 
- -- para esto necesitamos: 
+ -- For this, we need:
 
- -- 1.- Cantidad total de ingredientes
- -- 2.- Costo total de ingredientes
- -- 3.- Calcular el costo de articulos
- -- 4.- Porcentaje de stock restante por ingrediente 
- -- 5.- Lista de ingredientes para re-ordenar basado en el stock restante
- -- 6.- Calcular salario de los trabajadores
+ -- 1.- Total quantity of ingredients
+-- 2.- Total cost of ingredients
+-- 3.- Calculate the cost of items
+-- 4.- Percentage of remaining stock per ingredient
+-- 5.- List of ingredients to reorder based on remaining stock
+-- 6.- Calculate staff salary
 
- -- Query para punto 1 , 2 y 3 --
+ -- Query for points 1, 2, and 3 --
  SELECT 
  S1.item_name,
  S1.ing_id,
@@ -39,9 +38,9 @@ LEFT JOIN items I ON O.item_id = I.item_id
  S1.ing_price,
  S1.Order_quantity,
  S1.recipe_quantity,
- S1.Order_quantity*S1.recipe_quantity AS Ordered_weight, -- Cantidad total de ingredientes --
- S1.ing_price/S1.ing_weight AS Unit_cost, -- Costo total de ingredientes --
- (S1.Order_quantity*S1.recipe_quantity)*(S1.ing_price/S1.ing_weight) AS Ingredient_cost --Costo de articulos -- 
+ S1.Order_quantity*S1.recipe_quantity AS Ordered_weight, -- Total quantity of ingredients --
+ S1.ing_price/S1.ing_weight AS Unit_cost,  -- Total cost of ingredients --
+ (S1.Order_quantity*S1.recipe_quantity)*(S1.ing_price/S1.ing_weight) AS Ingredient_cost -- Cost of items --
  FROM (SELECT 
  O.item_id,
  I.sku,
@@ -68,19 +67,19 @@ O.item_id,
  ;
 
 
- -- Query para punto 4 y 5 --
+ -- Query for points 4 and 5 --
 
  SELECT
   s2.ing_name,
   s2.Ordered_weight,
-  ing.ing_weight * inv.quantity AS total_inv_weight, --Porcentaje de stock restante por ingrediente --
-  (ing.ing_weight * inv.quantity)-s2.Ordered_weight as remaining_weight --Lista de ingredientes para re-ordenar basado en el stock restante --
+  ing.ing_weight * inv.quantity AS total_inv_weight, -- Percentage of remaining stock per ingredient --
+  (ing.ing_weight * inv.quantity)-s2.Ordered_weight as remaining_weight -- List of ingredients to reorder based on remaining stock --
 FROM (SELECT 
 ing_id,
 ing_name,
  SUM(ordered_weight) AS Ordered_weight
 FROM
- stock_1 -- Stock1 es una vista del query anterior --
+ stock_1 -- Stock1 is a view from the previous query --
  GROUP BY 
  ing_name,ing_id) s2
  LEFT JOIN inventory inv ON inv.ing_id = s2.ing_id
@@ -88,15 +87,16 @@ FROM
 
  ;
  
- -- Query para punto 6 --
+-- Query for point 6 --
 
- -- Quitar horas de las fechas --
+-- Remove time from dates --
+
 
 ALTER TABLE rota
 ALTER COLUMN date DATE
 ;
 
--- Quitar fechas de las horas --
+-- Remove dates from times --
 
 ALTER TABLE shift
 ALTER COLUMN start_time TIME
@@ -118,7 +118,7 @@ S.sal_per_hour,
 SH.start_time,
 SH.end_time,
 (datediff(minute,sh.end_time,sh.start_time))/60 as hours_in_shift,
-(datediff(minute,sh.end_time,sh.start_time))/60*s.sal_per_hour as staff_cost -- Calcular salario de los trabajadores --
+(datediff(minute,sh.end_time,sh.start_time))/60*s.sal_per_hour as staff_cost -- Calculate staff salary --
 FROM rota R 
 LEFT JOIN staff S ON R.staff_id = S.staff_id
 LEFT JOIN shift SH ON R.shift_id = SH.shift_id
