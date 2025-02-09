@@ -1,65 +1,43 @@
 # SQL.POWERBI
 
-CoffeShop:
+CoffeeShop:
 
-Este proyecto tiene como objetivo analizar el rendimiento de las ventas, inventario y trabadores de una tienda de cafés. Se ha utilizado SQL para la extracción y manipulación de datos desde una base de datos y Power BI para la visualización de los resultados de análisis.
-El set de datos fue descargado mediante Kaggle,URL : https://www.kaggle.com/datasets/viramatv/coffee-shop-data
+This project aims to analyze the performance of sales, inventory, and staff at a coffee shop. SQL was used for data extraction and manipulation from a database, and Power BI was used for visualizing the analysis results. The dataset was downloaded from Kaggle, URL: https://www.kaggle.com/datasets/viramatv/coffee-shop-data
 
--Teconologías:
+-- Technologies:
 
-SQL Server: Para la consulta, manipulación y análisis de datos.
+SQL Server: For querying, manipulating, and analyzing data.
 
+Power BI: For creating interactive dashboards and visualizing the results.
 
-Power BI: Para la creación de dashboards interactivos y la visualización de los resultados.
+Excel (Optional): For additional analysis or handling external data.
 
+-- Description:
 
-Excel (Opcional): Para algunos análisis adicionales o manejo de datos externos.
+The coffee shop wants to better understand its performance in terms of sales, staff behavior, inventory, and profitability.
 
+The main objectives of the analysis include:
 
+Identifying the best-selling products and those with low turnover.
 
--Descripción:
+Analyzing staff payment behavior and hours worked.
 
-La tienda de cafés desea comprender mejor su rendimiento en términos de ventas, comportamiento de los trabajadores, inventario y rentabilidad.
+Studying income distribution by product categories and seasons.
 
-Los principales objetivos del análisis incluyen:
-
-
-Identificar los productos más vendidos y aquellos con menor rotación.
-
-
-Analizar el comportamiento de pago a trabajadores y horas trabajadas.
+Reviewing stock levels and determining optimal times to reorder products.
 
 
-Estudiar la distribución de ingresos por categorías de productos y temporadas.
+-- File and Folder Description:
 
 
-Revisar las existencias y determinar los tiempos óptimos para reordenar productos.
+CoffeeShop.xlsx: Normalized data in Excel format.
 
+create_tables.sql: Script to create the database structure.
 
--Estructura:
+CoffeeShopDB.sql: SQL queries to extract key metrics and perform analysis.
 
+CoffeeShop_Dashboard.pbix: Dashboard summarizing sales, inventory, and staff management.
 
-
-└    ── CoffeShop.xlsx                 # Archivo excel con los datos trabajados en tablas normalizadas
-
-
-│   ├── create_tables.sql      # Script para crear las tablas de la base de datos
-
-
-│   ├── CoffeShopDB.sql            # Consultas SQL utilizadas para extraer los datos clave
-
-
-
-├── 📁 PowerBI
-
-
-│   ├── CoffeShop_Dashboard.pbix   # Informe de ventas,inventario,staff en Power BI (debe descargarse)
-
-
-
-
-└── README.md                  # Archivo de descripción del proyecto
-
-
+README.md: Project documentation, including objectives, technologies, and structure.
 
 
